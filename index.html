@@ -4,92 +4,1260 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Staffing & Manpower Solutions</title>
+  <title>ASCENVO | Staffing & Recruitment Solutions</title>
+
+  <meta
+    name="description"
+    content="ASCENVO is a South India based non-IT recruitment and staffing partner specializing in automobile, manufacturing and other industries."
+  >
 
   <style>
-    body {
+
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #222;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
-    .hero {
-      min-height: 100vh;
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #10213d;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    :root {
+      --navy: #061d46;
+      --green: #00a36c;
+      --light: #f5f8fb;
+      --grey: #64748b;
+      --white: #ffffff;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.97);
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 25px;
+    }
+
+    .logo img {
+      width: 165px;
+      display: block;
+    }
+
+    .nav-links {
       display: flex;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 30px;
-      box-sizing: border-box;
+      gap: 24px;
     }
 
-    .content {
+    .nav-links a {
+      text-decoration: none;
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: var(--green);
+    }
+
+    .nav-btn {
+      background: var(--green);
+      color: white !important;
+      padding: 10px 18px;
+      border-radius: 7px;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 88vh;
+      background:
+        linear-gradient(
+          110deg,
+          rgba(6,29,70,0.97),
+          rgba(6,29,70,0.90),
+          rgba(0,163,108,0.75)
+        );
+      display: flex;
+      align-items: center;
+      color: white;
+      padding: 70px 25px;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: auto;
+      width: 100%;
+    }
+
+    .hero-tag {
+      color: #63e6b2;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .hero h1 {
+      font-size: 58px;
+      line-height: 1.1;
+      max-width: 850px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #49d69d;
+    }
+
+    .hero p {
+      max-width: 720px;
+      font-size: 20px;
+      color: #e5edf8;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 7px;
+      transition: 0.3s;
+    }
+
+    .btn-green {
+      background: var(--green);
+      color: white;
+    }
+
+    .btn-white {
+      background: white;
+      color: var(--navy);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero-stats {
+      margin-top: 55px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 45px;
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-size: 24px;
+      color: white;
+    }
+
+    .hero-stat span {
+      color: #cad7e8;
+      font-size: 14px;
+    }
+
+    /* COMMON SECTIONS */
+
+    section {
+      padding: 85px 25px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-label {
+      color: var(--green);
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      color: var(--navy);
+      font-size: 38px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .section-subtitle {
+      color: var(--grey);
       max-width: 750px;
+      font-size: 17px;
+      margin-bottom: 45px;
     }
 
-    h1 {
-      font-size: 48px;
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-image {
+      background: var(--light);
+      padding: 40px;
+      border-radius: 18px;
+      text-align: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      max-width: 430px;
+    }
+
+    .about-content p {
+      color: var(--grey);
+      margin-bottom: 20px;
+      font-size: 17px;
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .value {
+      background: var(--light);
+      border-left: 4px solid var(--green);
+      padding: 16px;
+      border-radius: 7px;
+      font-weight: bold;
+      color: var(--navy);
+    }
+
+    /* SERVICES */
+
+    .services {
+      background: var(--light);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 30px;
+      box-shadow: 0 8px 28px rgba(15,23,42,0.07);
+      border-top: 4px solid var(--green);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-icon {
+      font-size: 35px;
       margin-bottom: 15px;
     }
 
-    h2 {
+    .card h3 {
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--grey);
+      font-size: 15px;
+    }
+
+    /* AUTOMOBILE */
+
+    .automobile {
+      background: var(--navy);
+      color: white;
+    }
+
+    .automobile .section-title {
+      color: white;
+    }
+
+    .automobile .section-subtitle {
+      color: #cbd7e7;
+    }
+
+    .auto-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 22px;
+    }
+
+    .auto-role {
+      padding: 24px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .auto-role h3 {
+      color: #55dda6;
+      margin-bottom: 8px;
+    }
+
+    .auto-role p {
+      color: #dde7f4;
+      font-size: 15px;
+    }
+
+    /* INDUSTRIES */
+
+    .industry-grid {
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+      gap: 18px;
+    }
+
+    .industry {
+      padding: 25px 15px;
+      text-align: center;
+      background: var(--light);
+      border-radius: 12px;
+      font-weight: bold;
+      color: var(--navy);
+      transition: 0.3s;
+    }
+
+    .industry span {
+      display: block;
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .industry:hover {
+      background: var(--navy);
+      color: white;
+    }
+
+    /* ROLES */
+
+    .roles {
+      background: var(--light);
+    }
+
+    .roles-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 25px;
+    }
+
+    .role-box {
+      background: white;
+      padding: 28px;
+      border-radius: 12px;
+    }
+
+    .role-box h3 {
+      color: var(--green);
+      margin-bottom: 15px;
+    }
+
+    .role-box ul {
+      padding-left: 20px;
+      color: var(--grey);
+    }
+
+    .role-box li {
+      margin: 7px 0;
+    }
+
+    /* WHY US */
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 24px;
+    }
+
+    .why-item {
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .why-icon {
+      width: 65px;
+      height: 65px;
+      background: var(--navy);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin: 0 auto 18px;
+      font-size: 26px;
+    }
+
+    .why-item h3 {
+      margin-bottom: 8px;
+    }
+
+    .why-item p {
+      color: var(--grey);
+      font-size: 15px;
+    }
+
+    /* COVERAGE */
+
+    .coverage {
+      background: linear-gradient(120deg,var(--green),#05764f);
+      color: white;
+    }
+
+    .coverage .section-title {
+      color: white;
+    }
+
+    .coverage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+    }
+
+    .coverage-box {
+      background: rgba(255,255,255,0.12);
+      padding: 35px;
+      border-radius: 14px;
+    }
+
+    .coverage-box h3 {
       font-size: 25px;
-      font-weight: normal;
-      margin-bottom: 25px;
+      margin-bottom: 10px;
     }
 
-    p {
-      font-size: 18px;
-      line-height: 1.7;
+    /* CONTACT */
+
+    .contact {
+      background: #071a39;
+      color: white;
     }
 
-    .button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 28px;
-      background: #111827;
+    .contact .section-title {
+      color: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .contact-info p {
+      margin: 15px 0;
+      font-size: 17px;
+      color: #d5deeb;
+    }
+
+    .contact-info a {
       color: white;
       text-decoration: none;
-      border-radius: 6px;
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 34px;
+    .contact-card {
+      background: white;
+      color: var(--navy);
+      border-radius: 15px;
+      padding: 35px;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 15px;
+      font-size: 26px;
+    }
+
+    .contact-card p {
+      color: var(--grey);
+      margin-bottom: 20px;
+    }
+
+    .contact-buttons {
+      display: grid;
+      gap: 12px;
+    }
+
+    .contact-buttons a {
+      text-align: center;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #041127;
+      color: #b8c4d5;
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 14px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* MOBILE */
+
+    @media(max-width: 900px) {
+
+      .nav-links {
+        display: none;
       }
 
-      h2 {
-        font-size: 21px;
+      .logo img {
+        width: 145px;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .about-grid,
+      .contact-grid,
+      .coverage-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card-grid,
+      .roles-grid,
+      .why-grid,
+      .auto-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .industry-grid {
+        grid-template-columns: repeat(2,1fr);
       }
     }
+
+    @media(max-width: 600px) {
+
+      section {
+        padding: 65px 20px;
+      }
+
+      nav {
+        padding: 10px 18px;
+      }
+
+      .hero {
+        min-height: 90vh;
+      }
+
+      .hero h1 {
+        font-size: 37px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .section-title {
+        font-size: 31px;
+      }
+
+      .card-grid,
+      .roles-grid,
+      .why-grid,
+      .auto-grid,
+      .industry-grid,
+      .value-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-stats {
+        gap: 25px;
+      }
+    }
+
   </style>
 </head>
 
 <body>
 
-  <section class="hero">
-    <div class="content">
+<header>
+  <nav>
 
-      <h1>Staffing & Manpower Solutions</h1>
+    <a href="#home" class="logo">
+      <img src="ascenvo-logo.jpeg" alt="ASCENVO Logo">
+    </a>
 
-      <h2>Your Trusted Recruitment Partner</h2>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#automobile">Automobile</a>
+      <a href="#industries">Industries</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact" class="nav-btn">Contact Us</a>
+    </div>
 
-      <p>
-        Providing reliable manpower and staffing solutions across South India,
-        with a vision to expand across Pan India.
-      </p>
+  </nav>
+</header>
 
-      <p>
-        Currently specializing in the Automobile and Automotive industry.
-      </p>
 
-      <a href="#contact" class="button">
-        Partner With Us
+<section class="hero" id="home">
+
+  <div class="hero-inner">
+
+    <div class="hero-tag">
+      VISION. TALENT. VALUE.
+    </div>
+
+    <h1>
+      South India's Trusted
+      <span>Non-IT Recruitment Partner</span>
+    </h1>
+
+    <p>
+      Connecting the right talent with the right opportunity.
+      ASCENVO delivers reliable, efficient and industry-focused
+      staffing solutions to help businesses build stronger teams.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a
+        href="https://wa.me/917022377727?text=Hello%20ASCENVO,%20we%20are%20looking%20for%20manpower%20support."
+        class="btn btn-green"
+        target="_blank"
+      >
+        Hire Talent
+      </a>
+
+      <a href="#services" class="btn btn-white">
+        Explore Our Services
       </a>
 
     </div>
-  </section>
+
+    <div class="hero-stats">
+
+      <div class="hero-stat">
+        <strong>South India</strong>
+        <span>Current Recruitment Network</span>
+      </div>
+
+      <div class="hero-stat">
+        <strong>Pan India</strong>
+        <span>Our Growth Vision</span>
+      </div>
+
+      <div class="hero-stat">
+        <strong>2026</strong>
+        <span>Established</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="about">
+
+  <div class="container">
+
+    <div class="about-grid">
+
+      <div class="about-image">
+
+        <img
+          src="ascenvo-logo.jpeg"
+          alt="ASCENVO Vision Talent Value"
+        >
+
+      </div>
+
+      <div class="about-content">
+
+        <div class="section-label">About ASCENVO</div>
+
+        <h2 class="section-title">
+          Connecting Businesses With the Right Talent
+        </h2>
+
+        <p>
+          ASCENVO is a South India based recruitment partner
+          specializing in Non-IT hiring. We help businesses across
+          industries identify the right talent through expert sourcing,
+          candidate screening and customized recruitment solutions.
+        </p>
+
+        <p>
+          With a growing network across South India and a vision to
+          expand Pan India, our focus is to create long-term value for
+          both employers and candidates.
+        </p>
+
+        <div class="value-grid">
+
+          <div class="value">Integrity</div>
+          <div class="value">Commitment</div>
+          <div class="value">Excellence</div>
+          <div class="value">Partnership</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="services" id="services">
+
+  <div class="container">
+
+    <div class="section-label">What We Do</div>
+
+    <h2 class="section-title">
+      Our Recruitment Services
+    </h2>
+
+    <p class="section-subtitle">
+      End-to-end hiring support designed to help businesses recruit
+      efficiently, reduce hiring time and build strong teams.
+    </p>
+
+    <div class="card-grid">
+
+      <div class="card">
+        <div class="card-icon">👥</div>
+        <h3>Permanent Staffing</h3>
+        <p>
+          We identify qualified candidates for permanent roles,
+          helping businesses build dependable long-term teams.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">📈</div>
+        <h3>Bulk Hiring</h3>
+        <p>
+          High-volume recruitment support with speed, structured
+          screening and consistent candidate quality.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🎯</div>
+        <h3>Executive Search</h3>
+        <p>
+          Targeted recruitment for managerial, senior and leadership
+          positions across business functions.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">✅</div>
+        <h3>Candidate Screening</h3>
+        <p>
+          Structured screening and shortlisting to improve candidate
+          quality and ensure the right organizational fit.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🤝</div>
+        <h3>Recruitment Support (RPO)</h3>
+        <p>
+          Recruitment process support covering sourcing, screening,
+          coordination and onboarding assistance.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <h3>Customized Hiring Solutions</h3>
+        <p>
+          Flexible recruitment support aligned with your manpower
+          requirements, locations and hiring timelines.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="automobile" id="automobile">
+
+  <div class="container">
+
+    <div class="section-label">
+      Our Key Focus
+    </div>
+
+    <h2 class="section-title">
+      Automobile & Automotive Staffing
+    </h2>
+
+    <p class="section-subtitle">
+      ASCENVO is currently strengthening its expertise in automobile
+      and automotive recruitment, supporting dealerships, service
+      operations, workshops and automotive businesses with qualified
+      talent.
+    </p>
+
+    <div class="auto-grid">
+
+      <div class="auto-role">
+        <h3>Sales</h3>
+        <p>
+          Sales Executives, Sales Officers, Team Leaders and Sales Managers.
+        </p>
+      </div>
+
+      <div class="auto-role">
+        <h3>Service</h3>
+        <p>
+          Service Advisors, Technicians, Electricians and Workshop Personnel.
+        </p>
+      </div>
+
+      <div class="auto-role">
+        <h3>Operations</h3>
+        <p>
+          Operations Executives, Supervisors, Branch Managers and Coordinators.
+        </p>
+      </div>
+
+      <div class="auto-role">
+        <h3>Technical</h3>
+        <p>
+          Technicians, Machine Operators, Quality Inspectors and Engineers.
+        </p>
+      </div>
+
+      <div class="auto-role">
+        <h3>Administration</h3>
+        <p>
+          HR, Accounts, Administration, Reception and Back Office professionals.
+        </p>
+      </div>
+
+      <div class="auto-role">
+        <h3>Leadership</h3>
+        <p>
+          General Managers, Service Managers, Sales Managers and Branch Heads.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="industries">
+
+  <div class="container">
+
+    <div class="section-label">Our Reach</div>
+
+    <h2 class="section-title">
+      Industries We Serve
+    </h2>
+
+    <p class="section-subtitle">
+      Our recruitment network supports a growing range of Non-IT
+      industries across South India.
+    </p>
+
+    <div class="industry-grid">
+
+      <div class="industry">
+        <span>🚗</span>
+        Automobile
+      </div>
+
+      <div class="industry">
+        <span>🏭</span>
+        Manufacturing
+      </div>
+
+      <div class="industry">
+        <span>🛍️</span>
+        Retail
+      </div>
+
+      <div class="industry">
+        <span>🏥</span>
+        Healthcare
+      </div>
+
+      <div class="industry">
+        <span>🚚</span>
+        Logistics
+      </div>
+
+      <div class="industry">
+        <span>🏗️</span>
+        Construction
+      </div>
+
+      <div class="industry">
+        <span>🏨</span>
+        Hospitality
+      </div>
+
+      <div class="industry">
+        <span>🎓</span>
+        Education
+      </div>
+
+      <div class="industry">
+        <span>📦</span>
+        FMCG
+      </div>
+
+      <div class="industry">
+        <span>🏬</span>
+        Warehousing
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="roles">
+
+  <div class="container">
+
+    <div class="section-label">
+      Talent Network
+    </div>
+
+    <h2 class="section-title">
+      We Hire for Various Roles
+    </h2>
+
+    <div class="roles-grid">
+
+      <div class="role-box">
+
+        <h3>Sales</h3>
+
+        <ul>
+          <li>Sales Executive</li>
+          <li>Sales Officer</li>
+          <li>Sales Manager</li>
+          <li>Business Development</li>
+          <li>Customer Relationship Executive</li>
+        </ul>
+
+      </div>
+
+      <div class="role-box">
+
+        <h3>Operations & Technical</h3>
+
+        <ul>
+          <li>Operations Executive</li>
+          <li>Supervisor</li>
+          <li>Service Advisor</li>
+          <li>Technician</li>
+          <li>Machine Operator</li>
+          <li>Quality Inspector</li>
+          <li>Production Engineer</li>
+        </ul>
+
+      </div>
+
+      <div class="role-box">
+
+        <h3>Administration & Leadership</h3>
+
+        <ul>
+          <li>HR Executive</li>
+          <li>HR Manager</li>
+          <li>Accountant</li>
+          <li>Admin Executive</li>
+          <li>Operations Manager</li>
+          <li>Service Manager</li>
+          <li>Branch Manager</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="why">
+
+  <div class="container">
+
+    <div class="section-label">
+      Why ASCENVO?
+    </div>
+
+    <h2 class="section-title">
+      Right Talent. Right Time. Right Impact.
+    </h2>
+
+    <div class="why-grid">
+
+      <div class="why-item">
+        <div class="why-icon">🎯</div>
+        <h3>Non-IT Recruitment Focus</h3>
+        <p>
+          Industry-focused recruitment solutions for operational,
+          technical, sales and leadership roles.
+        </p>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">🌐</div>
+        <h3>South India Network</h3>
+        <p>
+          Building a growing talent and recruitment network across
+          South India.
+        </p>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">⏱️</div>
+        <h3>Fast & Efficient Hiring</h3>
+        <p>
+          Structured sourcing and screening processes designed to
+          improve hiring turnaround.
+        </p>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">👥</div>
+        <h3>Quality Candidate Database</h3>
+        <p>
+          Continuously developing our candidate network across
+          multiple industries and job functions.
+        </p>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">🔄</div>
+        <h3>End-to-End Support</h3>
+        <p>
+          Supporting clients from sourcing and screening through
+          interview coordination and onboarding.
+        </p>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">🤝</div>
+        <h3>Client-Focused Approach</h3>
+        <p>
+          Recruitment strategies tailored to each client's specific
+          manpower requirements.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="coverage">
+
+  <div class="container">
+
+    <div class="section-label" style="color:white;">
+      Our Presence
+    </div>
+
+    <h2 class="section-title">
+      South India Today. Pan India Tomorrow.
+    </h2>
+
+    <div class="coverage-grid">
+
+      <div class="coverage-box">
+
+        <h3>Current Focus</h3>
+
+        <p>
+          ASCENVO currently supports recruitment and manpower
+          requirements across South India, with our operations based
+          in Palakkad, Kerala.
+        </p>
+
+      </div>
+
+      <div class="coverage-box">
+
+        <h3>Our Vision</h3>
+
+        <p>
+          To develop ASCENVO into a trusted Pan-India recruitment
+          partner known for quality talent, responsive service and
+          long-term business partnerships.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <div class="contact-grid">
+
+      <div class="contact-info">
+
+        <div class="section-label">
+          Let's Connect
+        </div>
+
+        <h2 class="section-title">
+          Looking for the Right Talent?
+        </h2>
+
+        <p>
+          Tell us about your manpower requirement and our recruitment
+          team will connect with you.
+        </p>
+
+        <p>
+          📞
+          <a href="tel:+917022377727">
+            +91 70223 77727
+          </a>
+        </p>
+
+        <p>
+          ✉️
+          <a href="mailto:ascenvo.hr@gmail.com">
+            ascenvo.hr@gmail.com
+          </a>
+        </p>
+
+        <p>
+          📍 Palakkad, Kerala
+        </p>
+
+        <p>
+          🏢 Established 2026
+        </p>
+
+      </div>
+
+      <div class="contact-card">
+
+        <h3>
+          Partner With ASCENVO
+        </h3>
+
+        <p>
+          Whether you need one critical hire or large-scale manpower
+          support, let's discuss how ASCENVO can support your
+          recruitment needs.
+        </p>
+
+        <div class="contact-buttons">
+
+          <a
+            href="https://wa.me/917022377727?text=Hello%20ASCENVO,%20I%20would%20like%20to%20discuss%20our%20manpower%20requirement."
+            target="_blank"
+            class="btn btn-green"
+          >
+            WhatsApp Us
+          </a>
+
+          <a
+            href="tel:+917022377727"
+            class="btn"
+            style="background:#061d46;color:white;"
+          >
+            Call ASCENVO
+          </a>
+
+          <a
+            href="mailto:ascenvo.hr@gmail.com"
+            class="btn"
+            style="background:#eef3f8;color:#061d46;"
+          >
+            Send Email
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <p>
+    <strong>ASCENVO</strong> — VISION. TALENT. VALUE.
+  </p>
+
+  <p>
+    Building Stronger Teams. Driving Better Business.
+  </p>
+
+  <p style="margin-top:10px;">
+    © 2026 ASCENVO. All Rights Reserved.
+  </p>
+
+</footer>
 
 </body>
 </html>
