@@ -601,7 +601,286 @@
         gap: 25px;
       }
     }
+/* ===== ASCENVO HERO UPGRADE ===== */
 
+header {
+  background: #ffffff;
+}
+
+nav {
+  min-height: 78px;
+  padding: 7px 25px;
+}
+
+.logo img {
+  width: 135px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: var(--navy);
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.hero {
+  min-height: calc(100vh - 78px);
+  padding: 65px 25px;
+}
+
+.hero-layout {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 55px;
+}
+
+.hero h1 {
+  font-size: 55px;
+}
+
+.industry-strip {
+  margin-top: 28px;
+  color: #d8e5f3;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .3px;
+}
+
+.industry-strip span {
+  color: #55dda6;
+  margin: 0 7px;
+}
+
+/* VISION TALENT VALUE */
+
+.brand-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 38px;
+}
+
+.brand-pillar {
+  padding: 18px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 12px;
+}
+
+.brand-pillar strong {
+  color: #55dda6;
+  display: block;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.brand-pillar p {
+  margin: 0;
+  color: #d7e2ef;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* RIGHT-SIDE RECRUITMENT VISUAL */
+
+.talent-visual {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visual-main {
+  width: 90%;
+  background: rgba(255,255,255,.97);
+  border-radius: 24px;
+  padding: 35px;
+  color: var(--navy);
+  box-shadow: 0 25px 60px rgba(0,0,0,.22);
+}
+
+.visual-badge {
+  display: inline-block;
+  background: #e7f8f1;
+  color: #07865a;
+  padding: 7px 12px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.visual-main h3 {
+  font-size: 29px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.visual-main > p {
+  color: #64748b;
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.talent-row {
+  display: grid;
+  gap: 12px;
+}
+
+.talent-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  background: #f4f7fa;
+  border-radius: 11px;
+}
+
+.talent-avatar {
+  min-width: 45px;
+  height: 45px;
+  background: var(--navy);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+.talent-card strong {
+  display: block;
+  font-size: 14px;
+}
+
+.talent-card small {
+  color: #718096;
+}
+
+.visual-footer {
+  margin-top: 20px;
+  padding-top: 17px;
+  border-top: 1px solid #e4e9ef;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.visual-footer strong {
+  color: var(--green);
+}
+
+/* WHATSAPP FLOATING BUTTON */
+
+.whatsapp-float {
+  position: fixed;
+  width: 58px;
+  height: 58px;
+  right: 22px;
+  bottom: 22px;
+  background: #25D366;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 29px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.25);
+  z-index: 9999;
+}
+
+/* MOBILE */
+
+@media(max-width:900px) {
+
+  nav {
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 78px;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,.12);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .talent-visual {
+    min-height: auto;
+    margin-top: 15px;
+  }
+
+  .visual-main {
+    width: 100%;
+  }
+}
+
+@media(max-width:600px) {
+
+  nav {
+    min-height: 70px;
+    padding: 4px 18px;
+  }
+
+  .logo img {
+    width: 125px;
+    height: 60px;
+  }
+
+  .nav-links {
+    top: 70px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 55px 20px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .brand-pillars {
+    grid-template-columns: 1fr;
+  }
+
+  .industry-strip {
+    line-height: 2;
+  }
+
+  .talent-visual {
+    display: none;
+  }
+}
   </style>
 </head>
 
@@ -614,13 +893,17 @@
       <img src="ascenvo-logo.jpeg" alt="ASCENVO Logo">
     </a>
 
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#automobile">Automobile</a>
-      <a href="#industries">Industries</a>
-      <a href="#why">Why Us</a>
-      <a href="#contact" class="nav-btn">Contact Us</a>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open menu">
+      ☰
+    </button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#about" onclick="closeMenu()">About</a>
+      <a href="#services" onclick="closeMenu()">Services</a>
+      <a href="#automobile" onclick="closeMenu()">Automobile</a>
+      <a href="#industries" onclick="closeMenu()">Industries</a>
+      <a href="#why" onclick="closeMenu()">Why Us</a>
+      <a href="#contact" class="nav-btn" onclick="closeMenu()">Contact Us</a>
     </div>
 
   </nav>
@@ -629,54 +912,131 @@
 
 <section class="hero" id="home">
 
-  <div class="hero-inner">
+  <div class="hero-layout">
 
-    <div class="hero-tag">
-      VISION. TALENT. VALUE.
-    </div>
+    <div>
 
-    <h1>
-      South India's Trusted
-      <span>Non-IT Recruitment Partner</span>
-    </h1>
-
-    <p>
-      Connecting the right talent with the right opportunity.
-      ASCENVO delivers reliable, efficient and industry-focused
-      staffing solutions to help businesses build stronger teams.
-    </p>
-
-    <div class="hero-buttons">
-
-      <a
-        href="https://wa.me/917022377727?text=Hello%20ASCENVO,%20we%20are%20looking%20for%20manpower%20support."
-        class="btn btn-green"
-        target="_blank"
-      >
-        Hire Talent
-      </a>
-
-      <a href="#services" class="btn btn-white">
-        Explore Our Services
-      </a>
-
-    </div>
-
-    <div class="hero-stats">
-
-      <div class="hero-stat">
-        <strong>South India</strong>
-        <span>Current Recruitment Network</span>
+      <div class="hero-tag">
+        VISION. TALENT. VALUE.
       </div>
 
-      <div class="hero-stat">
-        <strong>Pan India</strong>
-        <span>Our Growth Vision</span>
+      <h1>
+        South India's Trusted
+        <span>Non-IT Recruitment Partner</span>
+      </h1>
+
+      <p>
+        Connecting the right talent with the right opportunity.
+        ASCENVO provides reliable, efficient and industry-focused
+        recruitment solutions that help businesses build stronger teams.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          href="https://wa.me/917022377727?text=Hello%20ASCENVO,%20we%20are%20looking%20for%20manpower%20support."
+          target="_blank"
+          class="btn btn-green"
+        >
+          Hire Talent
+        </a>
+
+        <a href="#services" class="btn btn-white">
+          Explore Our Services
+        </a>
+
       </div>
 
-      <div class="hero-stat">
-        <strong>2026</strong>
-        <span>Established</span>
+      <div class="industry-strip">
+        Automobile
+        <span>•</span>
+        Manufacturing
+        <span>•</span>
+        Retail
+        <span>•</span>
+        Logistics
+        <span>•</span>
+        Healthcare
+      </div>
+
+      <div class="brand-pillars">
+
+        <div class="brand-pillar">
+          <strong>VISION</strong>
+          <p>
+            Building a trusted recruitment network across India.
+          </p>
+        </div>
+
+        <div class="brand-pillar">
+          <strong>TALENT</strong>
+          <p>
+            Connecting the right people with the right opportunities.
+          </p>
+        </div>
+
+        <div class="brand-pillar">
+          <strong>VALUE</strong>
+          <p>
+            Creating long-term impact for clients and candidates.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="talent-visual">
+
+      <div class="visual-main">
+
+        <div class="visual-badge">
+          ASCENVO TALENT NETWORK
+        </div>
+
+        <h3>
+          Building Stronger Teams
+        </h3>
+
+        <p>
+          Connecting businesses with qualified professionals across
+          sales, operations, technical and leadership functions.
+        </p>
+
+        <div class="talent-row">
+
+          <div class="talent-card">
+            <div class="talent-avatar">👤</div>
+            <div>
+              <strong>Sales & Customer Experience</strong>
+              <small>Automobile • Retail • FMCG</small>
+            </div>
+          </div>
+
+          <div class="talent-card">
+            <div class="talent-avatar">⚙️</div>
+            <div>
+              <strong>Technical & Operations</strong>
+              <small>Automobile • Manufacturing • Logistics</small>
+            </div>
+          </div>
+
+          <div class="talent-card">
+            <div class="talent-avatar">★</div>
+            <div>
+              <strong>Management & Leadership</strong>
+              <small>Mid-Level • Senior • Leadership Hiring</small>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="visual-footer">
+          <span>Recruitment Focus</span>
+          <strong>South India → Pan India</strong>
+        </div>
+
       </div>
 
     </div>
@@ -684,7 +1044,6 @@
   </div>
 
 </section>
-
 
 <section id="about">
 
@@ -1258,6 +1617,23 @@
   </p>
 
 </footer>
+<a
+  href="https://wa.me/917022377727?text=Hello%20ASCENVO,%20I%20would%20like%20to%20discuss%20our%20recruitment%20requirement."
+  target="_blank"
+  class="whatsapp-float"
+  aria-label="Chat with ASCENVO on WhatsApp"
+>
+  ☎
+</a>
 
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+
+  function closeMenu() {
+    document.getElementById("navLinks").classList.remove("active");
+  }
+</script>
 </body>
 </html>
