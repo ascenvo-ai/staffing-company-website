@@ -1043,6 +1043,51 @@ nav {
   }
 
 }
+    /* ===== COMPACT ASCENVO HEADER ===== */
+
+header {
+  height: 78px;
+}
+
+nav {
+  height: 78px;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  align-items: center;
+}
+
+.logo {
+  height: 70px;
+  width: 190px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 190px !important;
+  height: 115px !important;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  header,
+  nav {
+    height: 78px;
+  }
+
+  .logo {
+    width: 175px;
+    height: 70px;
+  }
+
+  .logo img {
+    width: 175px !important;
+    height: 108px !important;
+  }
+}
   </style>
 </head>
 
