@@ -881,258 +881,6 @@ nav {
     display: none;
   }
 }
-    /* ===== INTEL INSPIRED ASCENVO HERO ===== */
-
-.intel-hero {
-  position: relative;
-  min-height: 900px;
-  background:
-    radial-gradient(circle at 50% 42%,
-      rgba(0,163,108,.32),
-      transparent 38%),
-    radial-gradient(circle at 25% 45%,
-      rgba(0,105,190,.38),
-      transparent 40%),
-    #031a3b;
-
-  overflow: hidden;
-  padding: 90px 25px 0;
-  display: block;
-}
-
-.intel-glow {
-  position: absolute;
-  width: 650px;
-  height: 650px;
-  left: 50%;
-  top: 40%;
-  transform: translate(-50%,-50%);
-
-  background: radial-gradient(
-    circle,
-    rgba(0,163,108,.30),
-    rgba(0,92,170,.18),
-    transparent 68%
-  );
-
-  filter: blur(25px);
-}
-
-.intel-content {
-  position: relative;
-  z-index: 2;
-  max-width: 1200px;
-  margin: auto;
-  text-align: center;
-}
-
-
-/* MAIN CARD */
-
-.intel-card {
-  max-width: 750px;
-  margin: 40px auto 0;
-
-  padding: 65px 65px 60px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(5,30,70,.96),
-      rgba(5,45,76,.93)
-    );
-
-  border: 1px solid rgba(255,255,255,.12);
-
-  box-shadow:
-    0 30px 80px rgba(0,0,0,.35),
-    0 0 70px rgba(0,163,108,.12);
-}
-
-
-/* BRAND LABEL */
-
-.intel-label {
-  color: #55dda6;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 4px;
-  margin-bottom: 32px;
-}
-
-
-/* ASCENVO BLOCK */
-
-.intel-mark {
-  display: inline-flex;
-  flex-direction: column;
-
-  color: white;
-  font-size: 34px;
-  font-weight: 800;
-  letter-spacing: 7px;
-
-  padding: 22px 28px;
-  margin-bottom: 32px;
-
-  background: linear-gradient(
-    135deg,
-    rgba(0,163,108,.22),
-    rgba(0,92,170,.28)
-  );
-
-  border: 1px solid rgba(255,255,255,.15);
-}
-
-.intel-mark small {
-  color: #55dda6;
-  font-size: 10px;
-  letter-spacing: 3px;
-  margin-top: 8px;
-}
-
-
-/* TEXT */
-
-.intel-small-title {
-  color: #cbd8e8;
-  font-size: 16px;
-  margin-bottom: 12px;
-}
-
-.intel-card h1 {
-  color: white;
-  font-size: clamp(38px, 5vw, 62px);
-  line-height: 1.08;
-  margin: 0 0 22px;
-  font-weight: 750;
-}
-
-.intel-card h1 span {
-  color: #55dda6;
-}
-
-.intel-description {
-  max-width: 590px;
-  margin: 0 auto 32px;
-
-  color: #d5dfeb;
-  font-size: 17px;
-  line-height: 1.7;
-}
-
-
-/* CTA */
-
-.intel-button {
-  display: inline-block;
-
-  padding: 16px 30px;
-
-  background: #00a36c;
-  color: white;
-
-  border-radius: 4px;
-
-  font-weight: 700;
-  text-decoration: none;
-
-  transition: .25s;
-}
-
-.intel-button:hover {
-  transform: translateY(-2px);
-  background: #00bb7c;
-}
-
-
-/* INDUSTRIES */
-
-.intel-industries {
-  position: relative;
-  z-index: 3;
-
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  gap: 13px 28px;
-
-  margin-top: 45px;
-
-  color: #a9c2d8;
-
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 2px;
-}
-
-.intel-industries span:not(:last-child)::after {
-  content: "•";
-  color: #55dda6;
-  margin-left: 28px;
-}
-
-
-/* LARGE BACKGROUND WORD */
-
-.giant-word {
-  position: relative;
-
-  margin-top: 25px;
-  margin-bottom: -40px;
-
-  font-size: clamp(110px, 20vw, 270px);
-
-  line-height: .85;
-
-  font-weight: 800;
-  letter-spacing: -10px;
-
-  color: rgba(13,88,145,.24);
-
-  user-select: none;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-  .intel-hero {
-    min-height: auto;
-    padding: 45px 18px 0;
-  }
-
-  .intel-card {
-    padding: 45px 24px;
-    margin-top: 20px;
-  }
-
-  .intel-mark {
-    font-size: 24px;
-    letter-spacing: 5px;
-  }
-
-  .intel-description {
-    font-size: 15px;
-  }
-
-  .intel-industries {
-    gap: 12px;
-    line-height: 1.8;
-  }
-
-  .intel-industries span:not(:last-child)::after {
-    margin-left: 12px;
-  }
-
-  .giant-word {
-    font-size: 25vw;
-    letter-spacing: -5px;
-    margin-top: 35px;
-  }
-}
   </style>
 </head>
 
@@ -1162,62 +910,141 @@ nav {
 </header>
 
 
-<section class="hero intel-hero" id="home">
+<section class="hero" id="home">
 
-  <div class="intel-glow"></div>
+  <div class="hero-layout">
 
-  <div class="intel-content">
+    <div>
 
-    <div class="intel-card">
-
-      <div class="intel-label">
-        VISION • TALENT • VALUE
+      <div class="hero-tag">
+        VISION. TALENT. VALUE.
       </div>
-
-      <div class="intel-mark">
-        ASCENVO
-        <small>NON-IT RECRUITMENT</small>
-      </div>
-
-      <p class="intel-small-title">
-        Recruitment & Staffing Solutions
-      </p>
 
       <h1>
-        Connecting Talent.<br>
-        <span>Building Businesses.</span>
+        South India's Trusted
+        <span>Non-IT Recruitment Partner</span>
       </h1>
 
-      <p class="intel-description">
-        Connecting businesses with the right people through
-        reliable, efficient and industry-focused recruitment solutions.
+      <p>
+        Connecting the right talent with the right opportunity.
+        ASCENVO provides reliable, efficient and industry-focused
+        recruitment solutions that help businesses build stronger teams.
       </p>
 
-      <a
-        href="https://wa.me/917022377727?text=Hello%20ASCENVO,%20we%20are%20looking%20for%20recruitment%20support."
-        target="_blank"
-        class="intel-button"
-      >
-        Hire Talent →
-      </a>
+      <div class="hero-buttons">
+
+        <a
+          href="https://wa.me/917022377727?text=Hello%20ASCENVO,%20we%20are%20looking%20for%20manpower%20support."
+          target="_blank"
+          class="btn btn-green"
+        >
+          Hire Talent
+        </a>
+
+        <a href="#services" class="btn btn-white">
+          Explore Our Services
+        </a>
+
+      </div>
+
+      <div class="industry-strip">
+        Automobile
+        <span>•</span>
+        Manufacturing
+        <span>•</span>
+        Retail
+        <span>•</span>
+        Logistics
+        <span>•</span>
+        Healthcare
+      </div>
+
+      <div class="brand-pillars">
+
+        <div class="brand-pillar">
+          <strong>VISION</strong>
+          <p>
+            Building a trusted recruitment network across India.
+          </p>
+        </div>
+
+        <div class="brand-pillar">
+          <strong>TALENT</strong>
+          <p>
+            Connecting the right people with the right opportunities.
+          </p>
+        </div>
+
+        <div class="brand-pillar">
+          <strong>VALUE</strong>
+          <p>
+            Creating long-term impact for clients and candidates.
+          </p>
+        </div>
+
+      </div>
 
     </div>
 
-    <div class="intel-industries">
-      <span>AUTOMOBILE</span>
-      <span>MANUFACTURING</span>
-      <span>RETAIL</span>
-      <span>LOGISTICS</span>
-      <span>HEALTHCARE</span>
-    </div>
 
-    <div class="giant-word">
-      TALENT
+    <div class="talent-visual">
+
+      <div class="visual-main">
+
+        <div class="visual-badge">
+          ASCENVO TALENT NETWORK
+        </div>
+
+        <h3>
+          Building Stronger Teams
+        </h3>
+
+        <p>
+          Connecting businesses with qualified professionals across
+          sales, operations, technical and leadership functions.
+        </p>
+
+        <div class="talent-row">
+
+          <div class="talent-card">
+            <div class="talent-avatar">👤</div>
+            <div>
+              <strong>Sales & Customer Experience</strong>
+              <small>Automobile • Retail • FMCG</small>
+            </div>
+          </div>
+
+          <div class="talent-card">
+            <div class="talent-avatar">⚙️</div>
+            <div>
+              <strong>Technical & Operations</strong>
+              <small>Automobile • Manufacturing • Logistics</small>
+            </div>
+          </div>
+
+          <div class="talent-card">
+            <div class="talent-avatar">★</div>
+            <div>
+              <strong>Management & Leadership</strong>
+              <small>Mid-Level • Senior • Leadership Hiring</small>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="visual-footer">
+          <span>Recruitment Focus</span>
+          <strong>South India → Pan India</strong>
+        </div>
+
+      </div>
+
     </div>
 
   </div>
 
 </section>
+
 <section id="about">
 
   <div class="container">
@@ -1809,4 +1636,4 @@ nav {
   }
 </script>
 </body>
-</html>
+</html> 
