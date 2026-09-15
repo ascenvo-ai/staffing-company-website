@@ -881,6 +881,168 @@ nav {
     display: none;
   }
 }
+    /* ===== NEW ASCENVO PHOTO HERO ===== */
+
+.photo-hero {
+  position: relative;
+  min-height: 650px;
+  background: #061d46;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+}
+
+.photo-hero-content {
+  width: 50%;
+  padding: 85px 45px 85px max(45px, calc((100vw - 1200px) / 2));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+}
+
+.photo-hero-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 58%;
+  height: 100%;
+  background-image: url('ascenvo-hero.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Blend image smoothly into ASCENVO navy */
+.photo-hero-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #061d46 0%,
+    rgba(6,29,70,.80) 15%,
+    rgba(6,29,70,.20) 48%,
+    rgba(6,29,70,0) 75%
+  );
+}
+
+.photo-hero-tag {
+  color: #5be0ad;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 22px;
+}
+
+.photo-hero h1 {
+  color: #ffffff;
+  font-size: clamp(42px, 5vw, 68px);
+  line-height: 1.04;
+  margin: 0 0 24px;
+  max-width: 650px;
+}
+
+.photo-hero h1 span {
+  color: #55dda6;
+}
+
+.photo-hero-text {
+  max-width: 570px;
+  color: #d5e0ed;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.photo-hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.photo-primary {
+  background: #00a36c;
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.photo-secondary {
+  border: 1px solid rgba(255,255,255,.55);
+  color: white;
+  padding: 14px 25px;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.photo-industries {
+  margin-top: 32px;
+  color: #c9d7e6;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.photo-industries span {
+  color: #55dda6;
+  margin: 0 7px;
+}
+
+@media (max-width: 800px) {
+
+  .photo-hero {
+    min-height: 720px;
+    align-items: flex-end;
+  }
+
+  .photo-hero-image {
+    width: 100%;
+    height: 100%;
+    background-position: 62% center;
+  }
+
+  .photo-hero-image::before {
+    background: linear-gradient(
+      0deg,
+      rgba(6,29,70,.98) 5%,
+      rgba(6,29,70,.90) 40%,
+      rgba(6,29,70,.25) 75%,
+      rgba(6,29,70,.08) 100%
+    );
+  }
+
+  .photo-hero-content {
+    width: 100%;
+    padding: 330px 25px 55px;
+  }
+
+  .photo-hero h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .photo-hero {
+    min-height: 690px;
+  }
+
+  .photo-hero-content {
+    padding: 300px 20px 45px;
+  }
+
+  .photo-hero h1 {
+    font-size: 36px;
+  }
+
+  .photo-hero-text {
+    font-size: 15px;
+  }
+
+}
   </style>
 </head>
 
@@ -910,141 +1072,53 @@ nav {
 </header>
 
 
-<section class="hero" id="home">
+<section class="photo-hero" id="home">
 
-  <div class="hero-layout">
+  <div class="photo-hero-image"></div>
 
-    <div>
+  <div class="photo-hero-content">
 
-      <div class="hero-tag">
-        VISION. TALENT. VALUE.
-      </div>
+    <div class="photo-hero-tag">
+      VISION • TALENT • VALUE
+    </div>
 
-      <h1>
-        South India's Trusted
-        <span>Non-IT Recruitment Partner</span>
-      </h1>
+    <h1>
+      Connecting Talent.<br>
+      <span>Building Businesses.</span>
+    </h1>
 
-      <p>
-        Connecting the right talent with the right opportunity.
-        ASCENVO provides reliable, efficient and industry-focused
-        recruitment solutions that help businesses build stronger teams.
-      </p>
+    <p class="photo-hero-text">
+      ASCENVO connects businesses with the right people through
+      reliable, efficient and industry-focused Non-IT recruitment
+      solutions.
+    </p>
 
-      <div class="hero-buttons">
+    <div class="photo-hero-buttons">
 
-        <a
-          href="https://wa.me/917022377727?text=Hello%20ASCENVO,%20we%20are%20looking%20for%20manpower%20support."
-          target="_blank"
-          class="btn btn-green"
-        >
-          Hire Talent
-        </a>
+      <a
+        href="https://wa.me/917022377727?text=Hello%20ASCENVO,%20we%20are%20looking%20for%20recruitment%20support."
+        target="_blank"
+        class="photo-primary">
+        Hire Talent →
+      </a>
 
-        <a href="#services" class="btn btn-white">
-          Explore Our Services
-        </a>
-
-      </div>
-
-      <div class="industry-strip">
-        Automobile
-        <span>•</span>
-        Manufacturing
-        <span>•</span>
-        Retail
-        <span>•</span>
-        Logistics
-        <span>•</span>
-        Healthcare
-      </div>
-
-      <div class="brand-pillars">
-
-        <div class="brand-pillar">
-          <strong>VISION</strong>
-          <p>
-            Building a trusted recruitment network across India.
-          </p>
-        </div>
-
-        <div class="brand-pillar">
-          <strong>TALENT</strong>
-          <p>
-            Connecting the right people with the right opportunities.
-          </p>
-        </div>
-
-        <div class="brand-pillar">
-          <strong>VALUE</strong>
-          <p>
-            Creating long-term impact for clients and candidates.
-          </p>
-        </div>
-
-      </div>
+      <a href="#services" class="photo-secondary">
+        Explore Services
+      </a>
 
     </div>
 
-
-    <div class="talent-visual">
-
-      <div class="visual-main">
-
-        <div class="visual-badge">
-          ASCENVO TALENT NETWORK
-        </div>
-
-        <h3>
-          Building Stronger Teams
-        </h3>
-
-        <p>
-          Connecting businesses with qualified professionals across
-          sales, operations, technical and leadership functions.
-        </p>
-
-        <div class="talent-row">
-
-          <div class="talent-card">
-            <div class="talent-avatar">👤</div>
-            <div>
-              <strong>Sales & Customer Experience</strong>
-              <small>Automobile • Retail • FMCG</small>
-            </div>
-          </div>
-
-          <div class="talent-card">
-            <div class="talent-avatar">⚙️</div>
-            <div>
-              <strong>Technical & Operations</strong>
-              <small>Automobile • Manufacturing • Logistics</small>
-            </div>
-          </div>
-
-          <div class="talent-card">
-            <div class="talent-avatar">★</div>
-            <div>
-              <strong>Management & Leadership</strong>
-              <small>Mid-Level • Senior • Leadership Hiring</small>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="visual-footer">
-          <span>Recruitment Focus</span>
-          <strong>South India → Pan India</strong>
-        </div>
-
-      </div>
-
+    <div class="photo-industries">
+      Automobile <span>•</span>
+      Manufacturing <span>•</span>
+      Retail <span>•</span>
+      Logistics <span>•</span>
+      Healthcare
     </div>
 
   </div>
 
 </section>
-
 <section id="about">
 
   <div class="container">
