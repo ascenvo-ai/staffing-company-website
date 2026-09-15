@@ -1100,6 +1100,24 @@ nav {
     background-position: 58% center !important;
   }
 }
+    /* HERO BUTTONS SIDE BY SIDE */
+.hero-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-buttons .btn {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .hero-buttons {
+    gap: 12px;
+  }
+}
   </style>
 </head>
 
